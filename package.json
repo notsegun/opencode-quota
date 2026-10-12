@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "opencode-quota",
+  "version": "1.0.0",
+  "description": "multi-account quota watch for opencode: see what is left on every connected chatgpt and opencode console account, right in the footer",
+  "type": "module",
+  "license": "MIT",
+  "author": "notsegun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notsegun/opencode-quota.git"
+  },
+  "homepage": "https://github.com/notsegun/opencode-quota#readme",
+  "bugs": {
+    "url": "https://github.com/notsegun/opencode-quota/issues"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "quota",
+    "usage",
+    "chatgpt",
+    "codex",
+    "rate-limit",
+    "tui"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "types": "./index.ts"
+    },
+    "./tui": {
+      "import": "./tui.tsx",
+      "types": "./tui.tsx"
+    }
+  },
+  "files": [
+    "index.ts",
+    "tui.tsx",
+    "quota.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.ts",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@opencode/plugin": "latest"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.5.17",
+    "@opentui/solid": ">=0.5.17",
+    "solid-js": ">=1.9.0"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.0.27",
+    "@opentui/core": "0.5.17",
+    "@opentui/solid": "0.5.17",
+    "solid-js": "^1.9.0",
+    "typescript": "^5.9.0",
+    "@types/node": "^24.0.0"
+  }
+}
