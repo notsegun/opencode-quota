@@ -192,7 +192,3 @@ formatting, label disambiguation, backoff) and has no opencode imports, which is
 why it can be unit tested directly. `tui.tsx` holds the fetchers, the monitor,
 the footer line and the dashboard. `index.ts` is the server entrypoint that makes
 the package shape complete.
-
-## license
-
-mit
